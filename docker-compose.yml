@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  mongo505-db8:
+    image: "mongo:5.0.5"
+    container_name: mongo505-db8
+    ports:
+      - "27017:27017"
+    restart: "no"
