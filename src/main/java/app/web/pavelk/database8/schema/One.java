@@ -12,7 +12,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -26,7 +25,7 @@ public class One {
     private String name;
 
     @DocumentReference(collection = "Two")
-    private List<Two> two = new ArrayList<>();
+    private List<Two> two;
 
     @CreatedDate
     private LocalDateTime createdAt;
