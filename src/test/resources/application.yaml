@@ -6,17 +6,12 @@ server:
 spring:
   application:
     name: database8
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: ${DATABASE:database8}
-  jackson:
-    serialization:
-      indent_output: true
   mongodb:
     embedded:
       version: 3.5.5
+  jackson:
+    serialization:
+      indent_output: true
 
 logging:
   level:

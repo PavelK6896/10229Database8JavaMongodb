@@ -22,16 +22,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
-@AutoConfigureDataMongo
-//@DataMongoTest // or
 //@ExtendWith(SpringExtension.class)
+//@DataMongoTest // or
+@AutoConfigureDataMongo
 @TestPropertySource(properties = "spring.mongodb.embedded.version=3.5.5")
 @SpringBootTest
 @AutoConfigureMockMvc(addFilters = false)
 class EmbeddedMongodbTest {
 
     @Autowired
-    MongoTemplate mongoTemplate;
+    private MongoTemplate mongoTemplate;
 
     @Autowired
     private MockMvc mockMvc;
